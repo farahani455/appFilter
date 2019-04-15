@@ -1,1 +1,17 @@
-test
+ li.textContent = data;
+        li.className = classListData ;
+        evt.target.appendChild(li);
+    },
+    dragElem =  document.getElementsByClassName("dragme")
+    dropElem=document.getElementById("dropplc");
+    dropElem.addEventListener("dragenter",dragEnterMe);
+    dropElem.addEventListener("dragleave",dragLeaveMe);
+    dropElem.addEventListener("dragover",dragOverMe);
+    dropElem.addEventListener("drop",dropOnMe);
+    for (i=0;i<dragElem.length;i++){
+        dragElem[i].setAttribute('draggable', true);
+        dragElem[i].addEventListener("dragstart",dragMe );
+    }
+    
+
+</script>
